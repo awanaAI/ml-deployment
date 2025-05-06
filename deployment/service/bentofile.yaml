@@ -1,0 +1,17 @@
+service: service:MnistClassifier
+labels:
+  owner: your_name
+  project: mnist_classification
+include:
+- "*.py"
+- "*.h5"
+python:
+  packages:
+    - tensorflow[and-cuda]
+    - numpy
+    - pillow
+docker:
+  system_packages:
+    - libgl1
+
+
